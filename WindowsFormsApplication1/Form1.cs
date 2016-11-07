@@ -26,6 +26,7 @@ namespace WindowsFormsApplication1
             label1.Text = "";
             listBox1.Visible = false;
             groupBox1.Visible = false;
+            button12.BackColor = Color.Azure;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -34,6 +35,7 @@ namespace WindowsFormsApplication1
             listBox1.Visible = true;
             groupBox1.Visible = true;
             label1.Text = button1.Text;
+            listBox1.SelectedIndex = 0;
         
         }
 
@@ -56,7 +58,7 @@ namespace WindowsFormsApplication1
         }
         private void showQues(int sub,int chap)
         {
-            string[] lines = File.ReadLines(@"C:\Users\user\Desktop\IT\Chapter 1.txt").ToArray();
+            string[] lines = File.ReadLines(@"C:\Users\Lenono\Desktop\current affairs\Chapter 1.txt").ToArray();
             length=lines.Length;
             if (!(end >= lines.Length))
             {
@@ -96,6 +98,10 @@ namespace WindowsFormsApplication1
         {
             ButtonVisibility(true);
             label1.Text = "";
+            label2.Text = "";
+            label3.Text = "";
+            label4.Text = "";
+            label5.Text = "";
             listBox1.Visible = false;
             groupBox1.Visible = false;
         }
@@ -167,8 +173,7 @@ namespace WindowsFormsApplication1
                 end -= 6;
                 start += 6;
                 showQues(subject, chapter);
-                label6.Text = "" + index;
-                label7.Text = "" + length;
+               
             }
         }
 
@@ -179,10 +184,13 @@ namespace WindowsFormsApplication1
                 index += 6;
                 end += 6;
                 start -= 6;
-                label6.Text =""+ index;
-                label7.Text = "" + length;
                 showQues(subject, chapter);
             }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
