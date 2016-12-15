@@ -44,9 +44,7 @@
             <li><a href="/" class="page-scroll">Home</a></li>
             <li><a href="/home" class="page-scroll">Dashboard</a></li>
 
-            <li><a href="#three" class="page-scroll">Team</a></li>
-
-             <li><a href="#seven" class="page-scroll">Services</a></li>
+          
              @if(!Auth::guest())
             <li><a href="{{ url('/logout') }}"
                 onclick="event.preventDefault();

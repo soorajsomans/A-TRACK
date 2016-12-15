@@ -20,6 +20,10 @@ class StudyMaterialsController extends Controller
         $sub="History";
       $subject=StudyMaterial::where('subject','History')->get();
     }
+    else if($sub ==2){
+      $sub="Polity";
+    $subject=StudyMaterial::where('subject','Polity')->get();
+    }
     return view ('StudyMaterials.show')->withSubject($subject)->withSub($sub);
     }
     public function showPDF($id){

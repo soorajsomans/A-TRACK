@@ -16,6 +16,9 @@
                   <button type="button" class="btn btn-default btn-lg">
                     <span class="glyphicon glyphicon-star" aria-hidden="true"></span> View Attended Test
                   </button>
+                  <a href="{{url('/magUpload')}}" class="btn btn-primary btn-lg">
+                    <span class="glyphicon glyphicon-star" aria-hidden="true" ></span>Magazine
+                  </a>
                 </div>
             </div>
         </div>
