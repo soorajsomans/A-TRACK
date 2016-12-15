@@ -3,14 +3,14 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-12 col-md-offset-0">
+        <div class="col-sm-16 col-md-0">
             <div class="panel panel-info">
                 <div class="panel-heading">Select Subject</div>
                 <div class="panel-body">
                     <center>
                             <div class="col-sm-6 col-md-4">
                                 <div class="thumbnail">
-                                    <img src="images/hist.jpeg" alt="img">
+                                    <img src="images/history.jpeg" alt="img">
                                     <div class="caption">
                                         <h3>History</h3>
                                         <p>History</p>
@@ -22,7 +22,7 @@
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <div class="thumbnail">
-                                    <img src="images/bak1.jpg" alt="img">
+                                    <img src="images/geography.jpeg" alt="img">
                                     <div class="caption">
                                         <h3>Geography</h3>
                                         <p>...</p>
@@ -34,7 +34,7 @@
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <div class="thumbnail">
-                                    <img src="images/bak1.jpg" alt="img">
+                                    <img src="images/politics.jpg" alt="img">
                                     <div class="caption">
                                         <h3>Polity</h3>
                                         <p>...</p>
@@ -46,7 +46,7 @@
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <div class="thumbnail">
-                                    <img src="images/bak1.jpg" alt="img">
+                                    <img src="images/current-affairs.jpg" alt="img">
                                     <div class="caption">
                                         <h3>Current Affairs</h3>
                                         <p>...</p>
@@ -58,7 +58,7 @@
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <div class="thumbnail">
-                                    <img src="images/bak1.jpg" alt="img">
+                                    <img src="images/ecnomics.jpg" alt="img">
                                     <div class="caption">
                                         <h3>Economics</h3>
                                         <p>Economics is a bullshit.</p>
@@ -70,7 +70,7 @@
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <div class="thumbnail">
-                                    <img src="images/bak1.jpg" alt="img">
+                                    <img src="images/science.jpg" alt="img">
                                     <div class="caption">
                                         <h3>Science and Technology</h3>
                                         <p>...</p>
@@ -81,9 +81,11 @@
                                 </div>
                             </div>
                             @if(Auth::User()->role>0)
+
                                 <a href="{{url('/examUpload')}}" class="btn btn-success">
                                   <span class="glyphicon glyphicon-star" aria-hidden="true"></span>Add Exam questions
                                 </a>
+
                             @endif
                     </center>
 

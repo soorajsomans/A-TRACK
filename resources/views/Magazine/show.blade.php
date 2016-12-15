@@ -7,6 +7,28 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Mgazines</div>
                 <div class="panel-body">
+
+
+                  @if(Auth::User()->role>0)
+                <form enctype="multipart/form-data" method="POST" action="uploadMag">
+                  <label>Month</label>
+                  <select name="month">
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                  </select>
+
+                  <br>
+                  <label>Version:</label>
+                  <input type="text" name="version">
+                  <input type="file" name="files" id="file">
+                  <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                  <input type="submit" class="btn btn-primary" value="Upload">
+                </form>
+                <br>
+                  @endif
+
                   @foreach($mag as $mag)
                   <a href="{{url('/viewPDF',$mag->id)}}" class="btn btn-warning btn-lg">
                     <span class="glyphicon glyphicon-star" aria-hidden="true"></span>{{$mag->month}}
